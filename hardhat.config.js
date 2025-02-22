@@ -1,6 +1,12 @@
 require("@nomicfoundation/hardhat-toolbox");
 require('dotenv').config();
 
+
+// task action function receives the Hardhat Runtime Environment as second argument
+task("accounts", "Prints accounts", async (_, { web3 }) => {
+  console.log(await web3.eth.getAccounts());
+});
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
@@ -16,7 +22,6 @@ module.exports = {
     hardhat: {
       forking: {
         url: process.env.INFURA,
-        blockNumber: 75119521
       }
     }
   }

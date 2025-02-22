@@ -11,3 +11,9 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.js
 ```
+
+Add Hardhat to MetaMask
+New RPC URL: 
+http://127.0.0.1:8545/
+ChainID: 
+31337

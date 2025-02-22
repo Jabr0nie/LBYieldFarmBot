@@ -2,21 +2,7 @@
 
 pragma solidity ^0.8.10;
 
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-
-import {IJoeFactory} from "./IJoeFactory.sol";
-import {ILBFactory} from "./ILBFactory.sol";
-import {ILBLegacyFactory} from "./ILBLegacyFactory.sol";
-import {ILBLegacyRouter} from "./ILBLegacyRouter.sol";
-import {ILBPair} from "./ILBPair.sol";
-import {ILBToken} from "./ILBToken.sol";
-import {IWNATIVE} from "./IWNATIVE.sol";
-
-/**
- * @title Liquidity Book Router Interface
- * @author Trader Joe
- * @notice Required interface of LBRouter contract
- */
+import {IERC20} from "./IERC20.sol";
 interface ILBRouter {
     error LBRouter__SenderIsNotWNATIVE();
     error LBRouter__PairNotCreated(address tokenX, address tokenY, uint256 binStep);
